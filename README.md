@@ -14,13 +14,13 @@ after migrating hit `F5`
 # Demo Images
 
 ## Agent List
-![GitHub Logo](/images/AgentList.PNG)
+![GitHub Logo](/images/AgentList.png)
 
 ## Add
-![GitHub Logo](/images/AgentAdd.PNG)
+![GitHub Logo](/images/AgentAdd.png)
 
 ## Edit
-![GitHub Logo](/images/Agentedit.PNG)
+![GitHub Logo](/images/Agentedit.png)
 
 ## Delete
-![GitHub Logo](/images/AgentDelete.PNG)
+![GitHub Logo](/images/AgentDelete.png)
