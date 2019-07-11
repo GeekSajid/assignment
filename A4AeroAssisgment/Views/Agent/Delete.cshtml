@@ -1,0 +1,22 @@
+﻿@model A4AeroAssisgment.Models.BusinessEntities
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = null;
+
+}
+<div class="modal-body">
+
+    <h3 style="color:red;font-style:italic">Are you sure you want to delete @Model.Name?</h3>
+    <div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        }
+    </div>
+</div>

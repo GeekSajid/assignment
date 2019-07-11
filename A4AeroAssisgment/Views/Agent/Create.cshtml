@@ -1,0 +1,258 @@
+﻿@model A4AeroAssisgment.Models.BusinessEntities
+
+@{
+    ViewBag.Title = "Add Agent";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>
+<h2>Add Agent</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "agentAddForm" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">        
+        <hr />
+        @Html.ValidationSummary(true)
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Agent Info</a></li>
+            <li><a data-toggle="tab" href="#menu1">User</a></li>
+        </ul>
+        <div class="tab-content">
+            &nbsp;&nbsp;&nbsp;
+            <div id="home" class="tab-pane fade in active show">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Code, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Code, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Code)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Street, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Street, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Street)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.City, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.City)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.State, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.State)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Zip, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Zip, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Zip)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Country, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Country)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Mobile, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Mobile)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Phone)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ContactPerson, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.ContactPerson, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ContactPerson)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ReferredBy, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.ReferredBy, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ReferredBy)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Logo, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Logo, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Logo)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Balance, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.Balance, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Balance)
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CurrentBalance, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.CurrentBalance, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CurrentBalance)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Status, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        <input type="radio" name="Status" value="0" checked> New  &nbsp;&nbsp;
+                        <input type="radio" name="Status" value="1"> Active &nbsp;&nbsp;
+                        <input type="radio" name="Status" value="2"> Inactive &nbsp;&nbsp;
+                        <input type="radio" name="Status" value="3"> Blocked &nbsp;&nbsp;
+                        @Html.ValidationMessageFor(model => model.Status)
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu1" class="tab-pane fade in">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LoginUrl, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.LoginUrl, new { @class = "form-control User" })
+                        @Html.ValidationMessageFor(model => model.LoginUrl)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SecurityCode, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.SecurityCode, new { @class = "form-control User" })
+                        @Html.ValidationMessageFor(model => model.SecurityCode)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SMTPServer, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.SMTPServer, new { @class = "form-control User" })
+                        @Html.ValidationMessageFor(model => model.SMTPServer)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SMTPPort, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.SMTPPort, new { @class = "form-control User" })
+                        @Html.ValidationMessageFor(model => model.SMTPPort)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SMTPUsername, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(model => model.SMTPUsername, new { @class = "form-control User" })
+                        @Html.ValidationMessageFor(model => model.SMTPUsername)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SMTPPassword, new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.PasswordFor(model => model.SMTPPassword, new { @class = "form-control User" })
+                        @Html.ValidationMessageFor(model => model.SMTPPassword)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" id="saveBtn" value="Save" class="btn btn-success" />
+                <br /><span id="errorText" style="color:red"></span>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script>
+
+    $('#saveBtn').click(function (event) {
+        event.preventDefault();
+        var frm = $('#agentAddForm');
+        $.validator.unobtrusive.parse(frm);
+        frm.validate();
+        if (frm.valid()){
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function (data) {
+                console.log('Submission was successful.');
+                if (data!='') {
+                    $("#errorText").html(data);
+                }
+            },
+            error: function (data) {
+                console.log('An error occurred.');
+            },
+        });
+        }
+
+    });
+
+    </script>
+}
